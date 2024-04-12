@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="126dp"
+        android:layout_height="133dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/ivMarca"
+        android:layout_width="222dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        app:srcCompat="@drawable/marca" />
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="218dp"
+        android:layout_height="64dp"
+        android:text="Iniciar"
+        android:textSize="24sp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/round_button"/>
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="218dp"
+        android:layout_height="64dp"
+        android:text="Crear cuenta"
+        android:textSize="24sp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/round_button"/>
+
+
+</FrameLayout>

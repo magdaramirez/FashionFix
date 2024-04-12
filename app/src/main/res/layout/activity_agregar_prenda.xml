@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AgregarPrenda">
+
+
+    <!-- Contenedor para el resto del contenido -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- RelativeLayout para el encabezado -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@color/purple">
+
+            <ImageView
+                android:id="@+id/ivMarca"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/marca"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/btnUsuario"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitCenter"/>
+
+        </RelativeLayout>
+
+        <!-- Encabezado de texto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/tvAgregarPrenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AGREGAR PRENDA"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTipo"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:text="Tipo:"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"/>
+
+        <Spinner
+            android:id="@+id/spTipo"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:textSize="24sp"
+
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/border_spinner"
+            android:layout_marginTop="-10dp"/>
+
+        <TextView
+            android:id="@+id/tvTalla"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:text="Talla:"
+            android:textSize="20sp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spTalla"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:textSize="24sp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/border_spinner"
+            android:layout_marginTop="-10dp"/>
+
+        <TextView
+            android:id="@+id/tvMarca"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:text="Marca:"
+            android:textSize="20sp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/etMarca"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:hint="  Ingrese la marca de la prenda"
+            android:inputType="text"
+            android:textSize="18dp"
+            android:background="@drawable/border_input"
+            android:layout_marginTop="-10dp"/>
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:text="Color:"
+            android:textSize="20sp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/etColor"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:hint="  Ingrese el color de la prenda"
+            android:inputType="text"
+            android:textSize="18dp"
+            android:background="@drawable/border_input"
+            android:layout_marginTop="-10dp"/>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvImagen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Imagen:"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"/>
+
+            <Button
+                android:id="@+id/btnSeleccionarImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar"
+                android:layout_marginLeft="15dp"
+                android:layout_alignBaseline="@id/tvImagen"
+                android:layout_toEndOf="@id/tvImagen"
+                android:onClick="subirImagen"
+                android:textSize="18sp"
+                android:backgroundTint="@color/purple"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imagenPreview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignBaseline="@id/btnSeleccionarImagen"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/imagen"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="218dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Agregar"
+            android:textSize="24sp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/round_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

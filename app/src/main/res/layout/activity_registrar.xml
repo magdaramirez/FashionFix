@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Registrar">
+
+    <ImageView
+        android:id="@+id/ivFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="126dp"
+        android:layout_height="133dp"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/ivMarca"
+        android:layout_width="222dp"
+        android:layout_height="150dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:srcCompat="@drawable/marca" />
+
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_nombre"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="150dp"/>
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/input_nombre"
+        android:inputType="textPersonName"
+        android:textSize="22sp"
+        android:background="@drawable/round_input"
+        android:layout_marginTop="180dp"/>
+
+    <TextView
+        android:id="@+id/tvApellidoPaterno"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_apellidoPaterno"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="230dp"/>
+
+    <EditText
+        android:id="@+id/etApellidoPaterno"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/input_apellidoPaterno"
+        android:inputType="textPersonName"
+        android:textSize="22sp"
+        android:background="@drawable/round_input"
+        android:layout_marginTop="260dp"/>
+
+    <TextView
+        android:id="@+id/tvApellidoMaterno"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_apellidoMaterno"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="310dp"/>
+
+    <EditText
+        android:id="@+id/etApellidoMaterno"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/input_apellidoMaterno"
+        android:inputType="textPersonName"
+        android:textSize="22sp"
+        android:background="@drawable/round_input"
+        android:layout_marginTop="340dp"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_email"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="390dp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress"
+        android:textSize="22sp"
+        android:background="@drawable/round_input"
+        android:layout_marginTop="420dp"/>
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_password"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="470dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/input_password"
+        android:inputType="textPassword"
+        android:textSize="22sp"
+        android:background="@drawable/round_input"
+        android:layout_marginTop="500dp"/>
+
+    <EditText
+        android:id="@+id/etConfirmarPassword"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/input_confirmarPassword"
+        android:inputType="textPassword"
+        android:textSize="22sp"
+        android:background="@drawable/round_input"
+        android:layout_marginTop="550dp"/>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="218dp"
+        android:layout_height="64dp"
+        android:text="@string/btn_registrar"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/round_button"
+        android:layout_marginTop="625dp"/>
+
+</FrameLayout>

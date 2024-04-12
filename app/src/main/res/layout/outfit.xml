@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagen rectangular vertical en el lado derecho -->
+    <ImageView
+        android:id="@+id/verticalImage"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bottom"
+        android:contentDescription="Bottom"/>
+
+    <!-- Imagen cuadrada superior -->
+    <ImageView
+        android:id="@+id/squareImageTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/squareImageBottom"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/verticalImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top"
+        android:contentDescription="Top"/>
+
+    <!-- Imagen cuadrada inferior -->
+    <ImageView
+        android:id="@+id/squareImageBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/squareImageTop"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shoes"
+        android:contentDescription="Shoes"/>
+
+</RelativeLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".InfoPrenda">
+
+    <!-- Contenedor para el resto del contenido -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- RelativeLayout para el encabezado -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@color/purple">
+
+            <ImageView
+                android:id="@+id/ivMarca"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/marca"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/btnUsuario"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitCenter"/>
+
+        </RelativeLayout>
+
+        <!-- Encabezado de texto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRENDA"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imagenPreview"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignBaseline="@id/btnSeleccionarImagen"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/imagen"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="-10dp">
+
+            <TextView
+                android:id="@+id/tvTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo:"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTipo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_alignBaseline="@id/tvTipo"
+                android:layout_toEndOf="@id/tvTipo"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-10dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvTalla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Talla:"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTalla1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Talla"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_alignBaseline="@id/tvTalla"
+                android:layout_toEndOf="@id/tvTalla"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-10dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvMarca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca:"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMarca1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marca"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_alignBaseline="@id/tvMarca"
+                android:layout_toEndOf="@id/tvMarca"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-10dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color:"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvColor1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_alignBaseline="@id/tvColor"
+                android:layout_toEndOf="@id/tvColor"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Último LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/purple"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnRecomendacion"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/recomendacion"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtRecomendacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Recomendaciones"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnCloset"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/closet"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtCloset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi Closet"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/darkPurple">
+
+            <ImageButton
+                android:id="@+id/btnAgregarPrenda"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/agregar"
+                android:scaleType="fitCenter"
+                android:gravity="center"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnHistorial"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/historial"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnFavoritos"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/favorito"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtFavoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favoritos"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

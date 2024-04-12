@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FashionFix</string>
+
+    //Strings Registrar
+    <string name="tv_nombre">Nombre:</string>
+    <string name="tv_apellidoPaterno">Apellido Paterno:</string>
+    <string name="tv_apellidoMaterno">Apellido Materno:</string>
+    <string name="tv_email">E-mail:</string>
+    <string name="tv_password">Contraseña:</string>
+
+    <string name="input_nombre">  Ingrese su nombre</string>
+    <string name="input_apellidoPaterno">  Ingrese su apellido paterno</string>
+    <string name="input_apellidoMaterno">  Ingrese su apellido materno</string>
+    <string name="input_email">  Ingrese su e-mail</string>
+    <string name="input_password">  Ingrese su contraseña</string>
+    <string name="input_confirmarPassword">  Confirme su contraseña</string>
+
+    <string name="btn_registrar">Registrar</string>
+
+</resources>
