@@ -63,6 +63,12 @@
 
         </LinearLayout>
 
+        <!-- Contenedor para el resto del contenido -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOutfits"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
     </LinearLayout>
 
 

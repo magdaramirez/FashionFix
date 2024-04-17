@@ -1,39 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- Imagen rectangular vertical en el lado derecho -->
-    <ImageView
-        android:id="@+id/verticalImage"
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bottom"
-        android:contentDescription="Bottom"/>
+    <!-- Encabezado de texto -->
+    <TextView
+        android:id="@+id/tvTituloOutfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="sans-serif-medium"/>
 
-    <!-- Imagen cuadrada superior -->
-    <ImageView
-        android:id="@+id/squareImageTop"
+    <!-- Contenedor de las imágenes -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_above="@id/squareImageBottom"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@id/verticalImage"
-        android:scaleType="centerCrop"
-        android:src="@drawable/top"
-        android:contentDescription="Top"/>
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <!-- Imagen cuadrada inferior -->
-    <ImageView
-        android:id="@+id/squareImageBottom"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/squareImageTop"
-        android:layout_alignParentStart="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/shoes"
-        android:contentDescription="Shoes"/>
+        <!-- Imagen del pantalón -->
+        <ImageView
+            android:id="@+id/imageView_Bottom"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_weight="2"
+            android:src="@drawable/bottom"
+            android:scaleType="fitCenter"/>
 
-</RelativeLayout>
+        <!-- Contenedor de la camisa y los zapatos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="380dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- Imagen de la camisa -->
+            <ImageView
+                android:id="@+id/imageView_Top"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/top"
+                android:scaleType="fitCenter"/>
+
+            <!-- Imagen de los zapatos -->
+            <ImageView
+                android:id="@+id/imageView_Shoes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/shoes"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

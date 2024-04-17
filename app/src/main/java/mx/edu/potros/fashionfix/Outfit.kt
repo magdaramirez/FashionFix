@@ -1,5 +1,7 @@
 package mx.edu.potros.fashionfix
 
-data class Outfit(var top:String?=null,
-                  var bottom:String?=null,
-                  var shoes:String?=null)
+data class Outfit(
+    var top: Int? = null,
+    var bottom: Int? = null,
+    var shoes: Int? = null
+)

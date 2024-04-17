@@ -11,7 +11,7 @@
     </item>
     <!-- Triángulo indicador de lista desplegable -->
     <item android:right="15dp" android:top="8dp" android:bottom="8dp">
-        <bitmap android:src="@drawable/flechaAbajo"
+        <bitmap android:src="@drawable/flechaabajo"
             android:gravity="end|center_vertical" />
     </item>
 </layer-list>

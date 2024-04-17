@@ -63,7 +63,50 @@
 
         </LinearLayout>
 
+        <!-- Contenedor de las imágenes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- Imagen del pantalón -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_weight="2"
+                android:src="@drawable/bottom"
+                android:scaleType="fitCenter"/>
+
+            <!-- Contenedor de la camisa y los zapatos -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="380dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Imagen de la camisa -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/top"
+                    android:scaleType="fitCenter"/>
+
+                <!-- Imagen de los zapatos -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/shoes"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
+
+
+
 
     <!-- LinearLayout Shuffle/Usar/Fav -->
     <LinearLayout
