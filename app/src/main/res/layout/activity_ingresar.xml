@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+        android:src="@drawable/background"
+        android:contentDescription="@string/descripcionFondo"/>
 
     <ImageView
         android:id="@+id/ivLogo"
@@ -20,7 +21,8 @@
         android:layout_height="133dp"
         android:layout_gravity="center_horizontal|top"
         android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/descripcionLogo"/>
 
     <ImageView
         android:id="@+id/ivMarca"
@@ -28,55 +30,58 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="120dp"
-        app:srcCompat="@drawable/marca" />
+        app:srcCompat="@drawable/marca"
+        android:contentDescription="@string/descripcionMarca"/>
 
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:text="E-mail:"
-        android:textSize="22dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_email"
+        android:textSize="22sp"
         android:textColor="@color/white"
-        android:layout_marginBottom="440dp"/>
+        android:layout_marginTop="280dp"/>
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="410dp"
-        android:hint="  Ingrese su e-mail"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="310dp"
+        android:hint="@string/input_email"
         android:inputType="textEmailAddress"
-        android:textSize="22dp"
+        android:autofillHints="emailAddress"
+        android:textSize="22sp"
         android:background="@drawable/round_input"/>
 
     <TextView
         android:id="@+id/tvPassword"
         android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:text="Contraseña:"
-        android:textSize="22dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_password"
+        android:textSize="22sp"
         android:textColor="@color/white"
-        android:layout_marginBottom="350dp"/>
+        android:layout_marginTop="370dp"/>
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="320dp"
-        android:hint="  Ingrese su contraseña"
+        android:layout_height="50dp"
+        android:autofillHints="password"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="400dp"
+        android:hint="@string/input_password"
         android:inputType="textPassword"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:background="@drawable/round_input"/>
 
     <Button
-        android:id="@+id/btnIngresar"
+        android:id="@+id/btnIniciar"
         android:layout_width="218dp"
         android:layout_height="64dp"
-        android:text="Ingresar"
+        android:text="@string/btn_iniciar"
         android:textSize="24sp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="80dp"

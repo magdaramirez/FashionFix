@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textColor="@color/black"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:fontFamily="sans-serif-medium"/>
 
     <!-- Contenedor de las imágenes -->
@@ -28,7 +28,8 @@
             android:layout_height="400dp"
             android:layout_weight="2"
             android:src="@drawable/bottom"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/descripcion_bottom"/>
 
         <!-- Contenedor de la camisa y los zapatos -->
         <LinearLayout
@@ -44,7 +45,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:src="@drawable/top"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/descripcion_top"/>
 
             <!-- Imagen de los zapatos -->
             <ImageView
@@ -53,7 +55,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:src="@drawable/shoes"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/descripcion_shoes"/>
         </LinearLayout>
     </LinearLayout>
 

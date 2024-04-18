@@ -28,7 +28,8 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/marca"
                 android:layout_marginStart="20dp"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/descripcionMarca"/>
 
             <ImageButton
                 android:id="@+id/btnUsuario"
@@ -39,7 +40,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/descripcion_btnUsuario"/>
 
         </RelativeLayout>
 
@@ -50,15 +52,14 @@
             android:orientation="vertical"
             android:gravity="center_vertical">
 
-
             <TextView
                 android:id="@+id/tvRecomendaciones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RECOMENDACIONES"
+                android:text="@string/tv_recomendaciones"
                 android:textSize="24sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:fontFamily="sans-serif-medium"/>
 
         </LinearLayout>
@@ -76,7 +77,8 @@
                 android:layout_height="400dp"
                 android:layout_weight="2"
                 android:src="@drawable/bottom"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/descripcion_bottom"/>
 
             <!-- Contenedor de la camisa y los zapatos -->
             <LinearLayout
@@ -91,7 +93,8 @@
                     android:layout_height="0dp"
                     android:layout_weight="1.5"
                     android:src="@drawable/top"
-                    android:scaleType="fitCenter"/>
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/descripcion_top"/>
 
                 <!-- Imagen de los zapatos -->
                 <ImageView
@@ -99,8 +102,11 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:src="@drawable/shoes"
-                    android:scaleType="fitCenter"/>
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/descripcion_shoes"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
@@ -113,7 +119,8 @@
         android:id="@+id/llShuffleUsarFav"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_above="@id/llMenu">
+        android:layout_above="@id/llMenu"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -124,12 +131,13 @@
 
             <ImageButton
                 android:id="@+id/btnShuffle"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/shuffle"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center" />
+                android:gravity="center"
+                android:contentDescription="@string/btn_shuffle"/>
 
         </LinearLayout>
 
@@ -144,8 +152,8 @@
                 android:id="@+id/btnUsar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Usar Outfit"
-                android:textSize="18sp"/>
+                android:text="@string/btn_usar"
+                android:textSize="22sp"/>
 
         </LinearLayout>
 
@@ -158,18 +166,19 @@
 
             <ImageButton
                 android:id="@+id/btnFav"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/fav"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/btn_fav"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <!-- LinearLayout Menu -->
+    <!-- Menú LinearLayout -->
     <LinearLayout
         android:id="@+id/llMenu"
         android:layout_width="match_parent"
@@ -177,7 +186,8 @@
         android:background="@color/purple"
         android:gravity="top"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -187,22 +197,23 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btnRecomendacion"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btnRecomendaciones"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/recomendacion"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center" />
+                android:gravity="center"
+                android:contentDescription="@string/tv_recomendacionesMenu"/>
 
             <TextView
-                android:id="@+id/txtRecomendacion"
+                android:id="@+id/tvRecomendacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Recomendaciones"
+                android:text="@string/tv_recomendacionesMenu"
                 android:textColor="@android:color/white"
-                android:textSize="10sp"
+                android:textSize="15sp"
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:gravity="center"/>
@@ -218,20 +229,21 @@
 
             <ImageButton
                 android:id="@+id/btnCloset"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/closet"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/tv_miClosetMenu"/>
 
             <TextView
-                android:id="@+id/txtCloset"
+                android:id="@+id/tvMiClosetMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mi Closet"
+                android:text="@string/tv_miClosetMenu"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center"/>
 
         </LinearLayout>
@@ -246,12 +258,13 @@
 
             <ImageButton
                 android:id="@+id/btnAgregarPrenda"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/agregar"
                 android:scaleType="fitCenter"
                 android:gravity="center"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/descripcion_btnAgregarPrenda"/>
 
         </LinearLayout>
 
@@ -264,20 +277,21 @@
 
             <ImageButton
                 android:id="@+id/btnHistorial"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/historial"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/tv_historialMenu"/>
 
             <TextView
-                android:id="@+id/txtHistorial"
+                android:id="@+id/tvHistorialMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Historial"
+                android:text="@string/tv_historialMenu"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center"/>
 
         </LinearLayout>
@@ -290,21 +304,22 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btnFavoritos"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btnFavoritosMenu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/favorito"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/tv_favoritosMenu"/>
 
             <TextView
-                android:id="@+id/txtFavoritos"
+                android:id="@+id/tvFavoritosMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favoritos"
+                android:text="@string/tv_favoritosMenu"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center"/>
 
         </LinearLayout>

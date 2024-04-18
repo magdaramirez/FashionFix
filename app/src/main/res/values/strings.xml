@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">FashionFix</string>
+    <string name="eslogan">estilo fresco, sin esfuerzo</string>
+    <string name="descripcionLogo">Logo FashionFix</string>
+    <string name="descripcionMarca">FashionFix</string>
+    <string name="descripcionFondo">Fondo</string>
 
-    //Strings Registrar
+    //menu
+    <string name="tv_recomendacionesMenu">Recomendaciones</string>
+    <string name="tv_miClosetMenu">Mi closet</string>
+    <string name="tv_historialMenu">Historial</string>
+    <string name="tv_favoritosMenu">Favoritos</string>
+
+    //main
+    <string name="btn_iniciar">Iniciar</string>
+    <string name="btn_crearCuenta">Crear cuenta</string>
+
+    //registrar
     <string name="tv_nombre">Nombre:</string>
     <string name="tv_apellidoPaterno">Apellido Paterno:</string>
     <string name="tv_apellidoMaterno">Apellido Materno:</string>
@@ -16,5 +30,61 @@
     <string name="input_confirmarPassword">  Confirme su contraseña</string>
 
     <string name="btn_registrar">Registrar</string>
+
+    //agregarPrenda
+    <string name="tv_agregarPrenda">AGREGAR PRENDA</string>
+
+    <string name="tv_talla">Talla:</string>
+    <string name="tv_tipo">Tipo:</string>
+    <string name="tv_marca">Marca:</string>
+    <string name="tv_color">Color:</string>
+
+    <string name="input_marca">Ingrese la marca de la prenda</string>
+    <string name="input_color">Ingrese el color de la prenda</string>
+
+    <string name="tv_imagen">Imagen:</string>
+    <string name="btn_seleccionar">Seleccionar</string>
+
+    <string name="btn_agregar">Agregar</string>
+
+    <string name="descripcion_btnUsuario">User</string>
+    <string name="descripcion_imagePreview">Previsualización de la prenda</string>
+
+    //closet
+    <string name="tv_miCloset">MI CLOSET</string>
+
+    <string name="btn_tops">Tops</string>
+    <string name="btn_bottoms">Bottoms</string>
+    <string name="btn_shoes">Shoes</string>
+
+    <string name="descripcion_btnAgregarPrenda">Agregar prenda</string>
+
+    //favoritos
+    <string name="tv_favoritos">FAVORITOS</string>
+
+    <string name="tv_historial">HISTORIAL</string>
+
+    //prenda
+    <string name="tv_prenda">PRENDA</string>
+
+    <string name="hint_tipo">Tipo</string>
+    <string name="hint_color">Color</string>
+    <string name="hint_marca">Marca</string>
+    <string name="hint_talla">Talla</string>
+
+    //recomendaciones
+    <string name="tv_recomendaciones">RECOMENDACIONES</string>
+
+    <string name="btn_fav">Favorito</string>
+    <string name="btn_shuffle">Shuffle</string>
+
+    <string name="descripcion_top">Top</string>
+    <string name="descripcion_bottom">Bottom</string>
+    <string name="descripcion_shoes">Shoes</string>
+
+    <string name="btn_usar">Usar Outfit</string>
+
+
+
 
 </resources>

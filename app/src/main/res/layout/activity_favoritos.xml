@@ -28,7 +28,8 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/marca"
                 android:layout_marginStart="20dp"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/descripcionMarca"/>
 
             <ImageButton
                 android:id="@+id/btnUsuario"
@@ -39,7 +40,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/descripcion_btnUsuario"/>
 
         </RelativeLayout>
 
@@ -55,10 +57,10 @@
                 android:id="@+id/tvFavoritos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FAVORITOS"
+                android:text="@string/tv_favoritos"
                 android:textSize="24sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:fontFamily="sans-serif-medium"/>
 
         </LinearLayout>
@@ -72,10 +74,8 @@
     </LinearLayout>
 
 
-
-    <!-- LinearLayout Menu -->
+    <!-- Menú LinearLayout -->
     <LinearLayout
-        android:id="@+id/llMenu"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/purple"
@@ -91,22 +91,23 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btnRecomendacion"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btnRecomendaciones"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/recomendacion"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center" />
+                android:gravity="center"
+                android:contentDescription="@string/tv_recomendacionesMenu"/>
 
             <TextView
-                android:id="@+id/txtRecomendacion"
+                android:id="@+id/tvRecomendacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Recomendaciones"
+                android:text="@string/tv_recomendacionesMenu"
                 android:textColor="@android:color/white"
-                android:textSize="10sp"
+                android:textSize="15sp"
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:gravity="center"/>
@@ -122,20 +123,21 @@
 
             <ImageButton
                 android:id="@+id/btnCloset"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/closet"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/tv_miClosetMenu"/>
 
             <TextView
-                android:id="@+id/txtCloset"
+                android:id="@+id/tvMiClosetMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mi Closet"
+                android:text="@string/tv_miClosetMenu"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center"/>
 
         </LinearLayout>
@@ -150,12 +152,13 @@
 
             <ImageButton
                 android:id="@+id/btnAgregarPrenda"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/agregar"
                 android:scaleType="fitCenter"
                 android:gravity="center"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/descripcion_btnAgregarPrenda"/>
 
         </LinearLayout>
 
@@ -168,20 +171,21 @@
 
             <ImageButton
                 android:id="@+id/btnHistorial"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/historial"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/tv_historialMenu"/>
 
             <TextView
-                android:id="@+id/txtHistorial"
+                android:id="@+id/tvHistorialMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Historial"
+                android:text="@string/tv_historialMenu"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center"/>
 
         </LinearLayout>
@@ -194,21 +198,22 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btnFavoritos"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/btnFavoritosMenu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/favorito"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:contentDescription="@string/tv_favoritosMenu"/>
 
             <TextView
-                android:id="@+id/txtFavoritos"
+                android:id="@+id/tvFavoritosMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favoritos"
+                android:text="@string/tv_favoritosMenu"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center"/>
 
         </LinearLayout>

@@ -28,7 +28,8 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/marca"
                 android:layout_marginStart="20dp"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/descripcionMarca"/>
 
             <ImageButton
                 android:id="@+id/btnUsuario"
@@ -39,7 +40,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/descripcion_btnUsuario"/>
 
         </RelativeLayout>
 
@@ -55,10 +57,10 @@
                 android:id="@+id/tvAgregarPrenda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AGREGAR PRENDA"
+                android:text="@string/tv_agregarPrenda"
                 android:textSize="24sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:fontFamily="sans-serif-medium"/>
 
         </LinearLayout>
@@ -67,16 +69,16 @@
             android:id="@+id/tvTipo"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:text="Tipo:"
+            android:text="@string/tv_tipo"
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginStart="5dp"/>
 
         <Spinner
             android:id="@+id/spTipo"
             android:layout_width="350dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:textSize="24sp"
 
             android:layout_gravity="bottom|center_horizontal"
@@ -87,17 +89,17 @@
             android:id="@+id/tvTalla"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:text="Talla:"
+            android:text="@string/tv_talla"
             android:textSize="20sp"
             android:layout_gravity="bottom|center_horizontal"
             android:textColor="@color/black"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"/>
 
         <Spinner
             android:id="@+id/spTalla"
             android:layout_width="350dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:textSize="24sp"
             android:layout_gravity="bottom|center_horizontal"
             android:background="@drawable/border_spinner"
@@ -107,21 +109,21 @@
             android:id="@+id/tvMarca"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:text="Marca:"
+            android:text="@string/tv_marca"
             android:textSize="20sp"
             android:layout_gravity="bottom|center_horizontal"
             android:textColor="@color/black"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"/>
 
         <EditText
             android:id="@+id/etMarca"
             android:layout_width="350dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:hint="  Ingrese la marca de la prenda"
+            android:hint="@string/input_marca"
             android:inputType="text"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:background="@drawable/border_input"
             android:layout_marginTop="-10dp"/>
 
@@ -129,21 +131,21 @@
             android:id="@+id/tvColor"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:text="Color:"
+            android:text="@string/tv_color"
             android:textSize="20sp"
             android:layout_gravity="bottom|center_horizontal"
             android:textColor="@color/black"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"/>
 
         <EditText
             android:id="@+id/etColor"
             android:layout_width="350dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:hint="  Ingrese el color de la prenda"
+            android:hint="@string/input_color"
             android:inputType="text"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:background="@drawable/border_input"
             android:layout_marginTop="-10dp"/>
 
@@ -158,7 +160,7 @@
                 android:id="@+id/tvImagen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Imagen:"
+                android:text="@string/tv_imagen"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp"/>
@@ -167,11 +169,10 @@
                 android:id="@+id/btnSeleccionarImagen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Seleccionar"
-                android:layout_marginLeft="15dp"
+                android:text="@string/btn_seleccionar"
+                android:layout_marginStart="15dp"
                 android:layout_alignBaseline="@id/tvImagen"
                 android:layout_toEndOf="@id/tvImagen"
-                android:onClick="subirImagen"
                 android:textSize="18sp"
                 android:backgroundTint="@color/purple"/>
 
@@ -181,19 +182,19 @@
             android:id="@+id/imagenPreview"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_alignBaseline="@id/btnSeleccionarImagen"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:src="@drawable/imagen"
             android:scaleType="fitCenter"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:contentDescription="@string/descripcion_imagePreview"/>
 
         <Button
             android:id="@+id/btnAgregar"
             android:layout_width="218dp"
             android:layout_height="64dp"
             android:layout_gravity="center_horizontal"
-            android:text="Agregar"
+            android:text="@string/btn_agregar"
             android:textSize="24sp"
             android:layout_marginTop="25dp"
             android:background="@drawable/round_button"/>
