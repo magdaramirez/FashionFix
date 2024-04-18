@@ -10,8 +10,8 @@ class Recomendaciones : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recomendaciones)
 
-        val recomendacionButton: ImageButton = findViewById(R.id.btnRecomendacion)
-        val favoritosButton: ImageButton = findViewById(R.id.btnFavoritos)
+        val recomendacionButton: ImageButton = findViewById(R.id.btnRecomendaciones)
+        val favoritosButton: ImageButton = findViewById(R.id.btnFavoritosMenu)
         val historialButton: ImageButton = findViewById(R.id.btnHistorial)
         val closetButton: ImageButton = findViewById(R.id.btnCloset)
         val agregarButton: ImageButton = findViewById(R.id.btnAgregarPrenda)
