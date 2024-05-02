@@ -48,7 +48,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:gravity="center_vertical">
 
             <TextView
@@ -61,12 +61,42 @@
                 android:layout_marginStart="15dp"
                 android:fontFamily="sans-serif-medium"/>
 
+            <ImageView
+                android:id="@+id/btnEdit"
+                android:layout_marginStart="15dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/editar"/>
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_marginStart="15dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/eliminar"/>
+
+            <ImageView
+                android:id="@+id/btnEditConfirm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/confirmaredit"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/btnEditCancel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/cancelaredit"
+                android:visibility="invisible"/>
+
         </LinearLayout>
 
         <ImageView
             android:id="@+id/imagenPreview"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -74,7 +104,7 @@
             android:layout_marginBottom="10dp"
             android:src="@drawable/imagen"
             android:scaleType="fitCenter"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:contentDescription="@string/descripcion_imagePreview"/>
 
         <RelativeLayout
@@ -94,7 +124,7 @@
                 android:layout_marginTop="15dp"
                 android:textStyle="bold"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/tvTipo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +134,12 @@
                 android:textColor="@color/black"
                 android:layout_alignBaseline="@id/tvTipo"
                 android:layout_toEndOf="@id/tvTipo"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:inputType="none"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+            />
 
         </RelativeLayout>
 
@@ -125,7 +160,7 @@
                 android:layout_marginTop="15dp"
                 android:textStyle="bold"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/tvTalla1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -135,7 +170,11 @@
                 android:textColor="@color/black"
                 android:layout_alignBaseline="@id/tvTalla"
                 android:layout_toEndOf="@id/tvTalla"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:inputType="none"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
         </RelativeLayout>
 
@@ -156,7 +195,7 @@
                 android:layout_marginTop="15dp"
                 android:textStyle="bold"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/tvMarca1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -166,7 +205,11 @@
                 android:textColor="@color/black"
                 android:layout_alignBaseline="@id/tvMarca"
                 android:layout_toEndOf="@id/tvMarca"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:inputType="none"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
         </RelativeLayout>
 
@@ -187,7 +230,7 @@
                 android:layout_marginTop="15dp"
                 android:textStyle="bold"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/tvColor1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -197,7 +240,11 @@
                 android:textColor="@color/black"
                 android:layout_alignBaseline="@id/tvColor"
                 android:layout_toEndOf="@id/tvColor"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:inputType="none"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
 
         </RelativeLayout>
 
