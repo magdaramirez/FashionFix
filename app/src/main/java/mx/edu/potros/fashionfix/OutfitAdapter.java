@@ -28,9 +28,9 @@ public class OutfitAdapter extends RecyclerView.Adapter<OutfitAdapter.OutfitView
     @Override
     public void onBindViewHolder(OutfitViewHolder holder, int position) {
         Outfit outfit = outfits.get(position);
-        holder.imageViewPantalon.setImageResource(outfit.getBottom());
-        holder.imageViewCamisa.setImageResource(outfit.getTop());
-        holder.imageViewZapatos.setImageResource(outfit.getShoes());
+        holder.imageViewPantalon.setImageDrawable(outfit.getBottom());
+        holder.imageViewCamisa.setImageDrawable(outfit.getTop());
+        holder.imageViewZapatos.setImageDrawable(outfit.getShoes());
     }
 
     // Método para obtener la cantidad de elementos en la lista de outfits

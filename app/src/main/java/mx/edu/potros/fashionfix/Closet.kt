@@ -136,7 +136,7 @@ class Closet : AppCompatActivity() {
 
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
-                    prendas.clear() // Limpiar la lista actual de prendas
+                    prendas.clear()
                     prendas.addAll(listaPrendas) // Agregar las nuevas prendas obtenidas
                     adaptador.notifyDataSetChanged() // Notificar al adaptador que los datos han cambiado
 
@@ -183,7 +183,7 @@ class Closet : AppCompatActivity() {
 
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
-                    prendas.clear() // Limpiar la lista actual de prendas
+                    prendas.clear()
                     prendas.addAll(listaPrendas) // Agregar las nuevas prendas obtenidas
                     adaptador.notifyDataSetChanged() // Notificar al adaptador que los datos han cambiado
 
@@ -231,7 +231,7 @@ class Closet : AppCompatActivity() {
 
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
-                    prendas.clear() // Limpiar la lista actual de prendas
+                    prendas.clear()
                     prendas.addAll(listaPrendas) // Agregar las nuevas prendas obtenidas
                     adaptador.notifyDataSetChanged() // Notificar al adaptador que los datos han cambiado
 
@@ -277,7 +277,7 @@ class Closet : AppCompatActivity() {
                     }
 
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
-                    prendas.clear() // Limpiar la lista actual de prendas
+                    prendas.clear()
                     prendas.addAll(listaPrendas) // Agregar las nuevas prendas obtenidas
                     adaptador.notifyDataSetChanged() // Notificar al adaptador que los datos han cambiado
 
@@ -313,7 +313,7 @@ class Closet : AppCompatActivity() {
 
         override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
             var prod=prendas[p0]
-            var inflator = contexto!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            var inflator = contexto!!.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
             var vista=inflator.inflate(R.layout.grid_item_prenda,null)
 
             val prenda = prendas[p0]

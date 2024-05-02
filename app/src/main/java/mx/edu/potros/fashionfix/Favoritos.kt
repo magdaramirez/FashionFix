@@ -58,10 +58,6 @@ class Favoritos : AppCompatActivity() {
     private fun obtenerOutfitsDeEjemplo(): List<Outfit> {
         val outfits = mutableListOf<Outfit>()
 
-        // Agregar outfits predefinidos
-        outfits.add(Outfit(R.drawable.top, R.drawable.bottom, R.drawable.shoes))
-        outfits.add(Outfit(R.drawable.top, R.drawable.bottom, R.drawable.shoes))
-        outfits.add(Outfit(R.drawable.top, R.drawable.bottom, R.drawable.shoes))
         return outfits
     }
 }
