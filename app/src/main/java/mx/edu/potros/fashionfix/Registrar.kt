@@ -54,12 +54,34 @@ class Registrar : AppCompatActivity() {
         val password = etPassword.text.toString().trim()
         val confirmarPassword = etConfirmarPassword.text.toString().trim()
 
+        val passwordRegex = Regex("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*()-+]).{8,}\$")
+
+        var camposCorrectos = true
+
         if (TextUtils.isEmpty(nombre) || TextUtils.isEmpty(apellidoPaterno) || TextUtils.isEmpty(apellidoMaterno) ||
             TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confirmarPassword)) {
+            camposCorrectos = false
             Toast.makeText(this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show()
-        } else if (password != confirmarPassword) {
+        }
+
+        if (!password.matches(passwordRegex)) {
+            camposCorrectos = false
+            Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula, un dígito y un carácter especial.", Toast.LENGTH_SHORT).show()
+        }
+
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            camposCorrectos = false
+            Toast.makeText(this, "El formato de correo electrónico no es válido.", Toast.LENGTH_SHORT).show()
+        }
+
+        if (password != confirmarPassword) {
+            camposCorrectos = false
             Toast.makeText(this, "Las contraseñas no coinciden.", Toast.LENGTH_SHORT).show()
-        } else {
+            etPassword.text.clear()
+            etConfirmarPassword.text.clear()
+        }
+
+        if (camposCorrectos) {
             mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {

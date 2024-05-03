@@ -14,9 +14,14 @@ import mx.edu.potros.fashionfix.databinding.ActivityIngresarBinding
 class Ingresar : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityIngresarBinding
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val email = etEmail.text.toString().trim()
+        val password = etPassword.text.toString().trim()
+
         binding = ActivityIngresarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -28,7 +33,9 @@ class Ingresar : AppCompatActivity() {
 
             when {
                 mEmail.isEmpty() || mPassword.isEmpty() -> {
-                    Toast.makeText(baseContext,"E-mail o contraseña incorrecta.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext,"Datos incorrectos.", Toast.LENGTH_SHORT).show()
+                    etEmail.text.clear()
+                    etPassword.text.clear()
                 }
                 else -> {
                     ingresar(mEmail, mPassword)
