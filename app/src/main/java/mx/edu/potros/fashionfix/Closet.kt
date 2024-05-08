@@ -39,6 +39,7 @@ class Closet : AppCompatActivity() {
         val historialButton: ImageButton = findViewById(R.id.btnHistorial)
         val closetButton: ImageButton = findViewById(R.id.btnCloset)
         val agregarButton: ImageButton = findViewById(R.id.btnAgregarPrenda)
+        val usuarioButton: ImageButton = findViewById(R.id.btnUsuario)
 
         val btnTops : Button = findViewById(R.id.btnTops)
         val btnBottoms : Button = findViewById(R.id.btnBottoms)
@@ -51,6 +52,11 @@ class Closet : AppCompatActivity() {
 
         // Obtener los datos de las prendas desde Firebase (o cualquier otra fuente)
         obtenerPrendasDesdeFirebase()
+
+        usuarioButton.setOnClickListener {
+            var intent: Intent = Intent(this, User::class.java)
+            startActivity(intent)
+        }
 
         recomendacionButton.setOnClickListener {
             var intent: Intent = Intent(this, Recomendaciones::class.java)
@@ -134,7 +140,6 @@ class Closet : AppCompatActivity() {
                         listaPrendas.add(prenda)
                     }
 
-                    // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
                     // Una vez que hayas obtenido todas las prendas, asigna la lista de prendas al adaptador
                     prendas.clear()
                     prendas.addAll(listaPrendas) // Agregar las nuevas prendas obtenidas

@@ -54,7 +54,7 @@ class Registrar : AppCompatActivity() {
         val password = etPassword.text.toString().trim()
         val confirmarPassword = etConfirmarPassword.text.toString().trim()
 
-        val passwordRegex = Regex("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*()-+]).{8,}\$")
+        val passwordRegex = Regex("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*()-+_.]).{8,}\$")
 
         var camposCorrectos = true
 

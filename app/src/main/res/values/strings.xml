@@ -84,6 +84,18 @@
 
     <string name="btn_usar">Usar Outfit</string>
 
+    //Usuario
+    <string name="tv_usuario">USUARIO</string>
+
+    <string name="tv_corrreo">Cuenta:</string>
+
+    <string name="tv_nroPrendas">Numero de Prendas:</string>
+    <string name="tv_favOutfits">Outfits en Favorito:</string>
+    <string name="tv_usadoOutfits">Outfits Usados:</string>
+
+    <string name="btn_singout">Cerrar Sesion</string>
+
+
 
 
 

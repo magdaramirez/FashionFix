@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.ArrayList
 
 class InfoPrenda : AppCompatActivity() {
 
@@ -53,8 +58,8 @@ class InfoPrenda : AppCompatActivity() {
         }
 
         val iv_prenda_image: ImageView = findViewById(R.id.imagenPreview)
-        val et_prenda_tipo: EditText = findViewById(R.id.tvTipo1)
-        val et_prenda_talla: EditText = findViewById(R.id.tvTalla1)
+        val sp_prenda_tipo: EditText = findViewById(R.id.tvTipo1)
+        val sp_prenda_talla: EditText = findViewById(R.id.tvTalla1)
         val et_prenda_marca: EditText = findViewById(R.id.tvMarca1)
         val et_prenda_color: EditText = findViewById(R.id.tvColor1)
 
@@ -87,8 +92,8 @@ class InfoPrenda : AppCompatActivity() {
                 .into(iv_prenda_image)
 
             // Establecer otros detalles de la prenda
-            et_prenda_tipo.setText(tipo)
-            et_prenda_talla.setText(talla)
+            sp_prenda_tipo.setText(tipo)
+            sp_prenda_talla.setText(talla)
             et_prenda_marca.setText(marca)
             et_prenda_color.setText(color)
         }

@@ -1,11 +1,16 @@
 package mx.edu.potros.fashionfix;
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
 
 import java.util.List;
 
@@ -28,10 +33,11 @@ public class OutfitAdapter extends RecyclerView.Adapter<OutfitAdapter.OutfitView
     @Override
     public void onBindViewHolder(OutfitViewHolder holder, int position) {
         Outfit outfit = outfits.get(position);
-        holder.imageViewPantalon.setImageDrawable(outfit.getBottom());
-        holder.imageViewCamisa.setImageDrawable(outfit.getTop());
-        holder.imageViewZapatos.setImageDrawable(outfit.getShoes());
+        cargarImagenDesdeUrl(outfit.getBottom(), holder.imageViewPantalon);
+        cargarImagenDesdeUrl(outfit.getTop(), holder.imageViewCamisa);
+        cargarImagenDesdeUrl(outfit.getShoes(), holder.imageViewZapatos);
     }
+
 
     // Método para obtener la cantidad de elementos en la lista de outfits
     @Override
@@ -55,5 +61,22 @@ public class OutfitAdapter extends RecyclerView.Adapter<OutfitAdapter.OutfitView
             imageViewCamisa = itemView.findViewById(R.id.imageView_Top);
             imageViewZapatos = itemView.findViewById(R.id.imageView_Shoes);
         }
+    }
+
+    // Método para cargar una imagen desde una URL y establecerla en un ImageView
+    private void cargarImagenDesdeUrl(String imageUrl, final ImageView imageView) {
+        Glide.with(imageView.getContext())
+                .load(imageUrl)
+                .into(new CustomTarget<Drawable>() {
+                    @Override
+                    public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
+                        imageView.setImageDrawable(resource);
+                    }
+
+                    @Override
+                    public void onLoadCleared(Drawable placeholder) {
+                        // No es necesario hacer nada aquí
+                    }
+                });
     }
 }

@@ -3,7 +3,8 @@ package mx.edu.potros.fashionfix
 import android.graphics.drawable.Drawable
 
 data class Outfit(
-    var top: Drawable? = null,
-    var bottom: Drawable? = null,
-    var shoes: Drawable? = null
+    var top: String? = null,
+    var bottom: String? = null,
+    var shoes: String? = null,
+    var favorito: Boolean = false
 )

@@ -37,6 +37,9 @@
             android:name=".Ingresar"
             android:exported="false" />
         <activity
+            android:name=".User"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
